@@ -1,0 +1,40 @@
+{
+  "name": "deepseek-websearch-mcp",
+  "version": "1.0.1",
+  "description": "DeepSeek 官方 Search/Fetch API 的 MCP server（官方 SDK 构建，webSearch/webFetch 双工具，支持时效过滤与结构化输出）",
+  "type": "module",
+  "bin": {
+    "deepseek-websearch-mcp": "server.mjs"
+  },
+  "files": [
+    "server.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "deepseek",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "web-search",
+    "search",
+    "web-fetch"
+  ],
+  "author": "zengzoxiong",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.0",
+    "zod": "4.6.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zengzoxiong/deepseek-search-mcp.git"
+  },
+  "homepage": "https://github.com/zengzoxiong/deepseek-search-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/zengzoxiong/deepseek-search-mcp/issues"
+  }
+}
