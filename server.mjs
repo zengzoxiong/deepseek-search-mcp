@@ -60,7 +60,7 @@ function freshnessToOps(freshness) {
 
 /** 调用 DeepSeek 工具接口，返回 { data, ms }；非 2xx 抛 Error（带中文提示） */
 async function apiPost(path, payload) {
-  const key = (process.env.DEEEPSEEK_API_KEY || "").trim();
+  const key = (process.env.DEEPSEEK_API_KEY || "").trim();
   if (!key) {
     throw new Error("未配置 DEEPSEEK_API_KEY 环境变量。请在 MCP 注册配置的 env 中填入 platform.deepseek.com 申请的 API Key。");
   }
@@ -246,7 +246,7 @@ function createServer() {
 }
 
 function readConfig() {
-  if (!process.env.DEEEPSEEK_API_KEY) {
+  if (!process.env.DEEPSEEK_API_KEY) {
     // 与 SDK 错误口径一致：启动期直接失败并给出中文指引
     throw new Error("未配置 DEEPSEEK_API_KEY 环境变量。请在 MCP 注册配置的 env 中填入 platform.deepseek.com 申请的 API Key。");
   }
